@@ -2,14 +2,27 @@
 //
 
 #include <iostream>
-enum months { January=1, February, March,April, May,June,July, August,September,October, November,December
-};
+enum class months:int { 
+    January=1,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+}month;
 
 int main()
 {
     setlocale(LC_ALL, "rus");
     bool exit = true;
     int choice{};
+   
     while (exit)//пока exit равен true
     {
         std::cout << "\nВведите номер месяца: ";
@@ -17,50 +30,50 @@ int main()
 
         switch (choice)
         {
-        case(months::January):
+        case(static_cast<int>(months::January)):
             std::cout << "\aЯнварь" << std::endl;
             break;
 
-        case(months::February):
+        case(static_cast<int>(months::February)):
             std::cout << "\aФевраль";
 
             break;
 
-        case(months::March):
+        case(static_cast<int>(months::March)):
             std::cout << "\aМарт";
 
             break;
 
-        case(months::April):
+        case(static_cast<int>(months::April)):
             std::cout << "Апрель";
 
             break;
 
-        case(months::May):
+        case(static_cast<int>(months::May)):
             std::cout << "\aМай";
 
             break;
 
-        case(months::June):
+        case(static_cast<int>(months::June)):
             std::cout << "\aИюнь";
 
             break;
-        case(months::July):
+        case(static_cast<int>(months::July)):
             std::cout << "\aИюль";
             break;
-        case(months::August):
+        case(static_cast<int>(months::August)):
             std::cout << "\aАвгутст";
             break;
-        case(months::September):
+        case(static_cast<int>(months::September)):
             std::cout << "\aСентябрь";
             break;
-        case(months::October):
+        case(static_cast<int>(months::October)):
             std::cout << "\aОктябь";
             break;
-        case(months::November):
+        case(static_cast<int>(months::November)):
             std::cout << "\aНоябь";
             break;
-        case(months::December):
+        case(static_cast<int>(months::December)):
             std::cout << "\aДекабрь";
             break;
            
